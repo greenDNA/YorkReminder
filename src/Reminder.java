@@ -17,7 +17,7 @@ public class Reminder {
     public Reminder(Scanner uInput){
         //to be finished, create a reminder without any parameters
         System.out.print("\nEnter name of reminder: ");
-        reminderName = uInput.next();
+        reminderName = uInput.nextLine();
         reminderDate = new Date();
         reminderStatus = false;
     }
