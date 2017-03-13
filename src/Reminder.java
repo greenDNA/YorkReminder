@@ -45,6 +45,6 @@ public class Reminder {
      * Override this to control what gets printed from a System.out.print() call or any variant of that
      */
     public String toString(){
-        return "Name: "+reminderName+"\nCreated: "+reminderDate.getTime()+"\nStatus: "+reminderStatus;
+        return "Name: "+reminderName + "\nCreated: " +reminderDate + "\nStatus: "+reminderStatus;
     }
 }

@@ -49,10 +49,4 @@ public class ReminderManager {
             System.out.println("\n"+i);
         }
     }
-/*
-    @Override
-    public String toString(){
-
-    }
-*/
 }
