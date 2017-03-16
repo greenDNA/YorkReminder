@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.PrintWriter;
+import java.io.*;
 
 /**
  * Created by Trayvont on 3/12/2017.
@@ -14,6 +11,8 @@ public class FileProcessor {
     BufferedReader br;
     PrintWriter pw;
     String buffer;
+    FileWriter fw;
+    BufferedWriter bw;
 
     /**
      * Introductory method to readin from a file into a String buffer
@@ -21,10 +20,28 @@ public class FileProcessor {
     public FileProcessor(){
         myFile = new File("Test.txt");
         try{
+            //myFile.createNewFile();
             if(myFile.exists()){
                 br = new BufferedReader(new FileReader(myFile));
-                buffer = br.readLine();
+                while((buffer = br.readLine()) != null) {
+                    //buffer = br.readLine();
+                    System.out.println(buffer);
+                }
+                br.close();
             }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        try{
+            fw = new FileWriter(myFile, true);
+            bw = new BufferedWriter(fw);
+            pw = new PrintWriter(bw);
+
+                pw.println("the text\n");
+                //more code
+                pw.println("more text\n");
+                //more code
+            pw.close();
         }catch (Exception e){
             e.printStackTrace();
         }

@@ -30,6 +30,7 @@ public class Main {
         Boolean running = true;
 	    System.out.println("Welcome to YorkReminder! This application will ensure that your reminder needs will be met!");
 
-        new ReminderManager(running);
+        //new ReminderManager(running);
+        new FileProcessor();
     }
 }
